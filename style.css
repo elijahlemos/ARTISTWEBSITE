@@ -387,3 +387,41 @@ footer small {
     transform: none;
   }
 }
+
+/* OPIUM ARTIST INFORMATION */
+
+.artist-facts {
+  margin-top: 30px;
+  padding: 25px;
+  background: #0d0d0d;
+  border: 1px solid #471019;
+  border-left: 4px solid #c40020;
+  box-shadow: 0 0 25px #49000a40;
+}
+
+.artist-facts h3 {
+  color: #ed1832;
+  font-size: 24px;
+  letter-spacing: 3px;
+  margin-top: 0;
+}
+
+.artist-facts p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 0;
+  margin: 0;
+  font-size: 15px;
+  border-bottom: 1px solid #292929;
+}
+
+.artist-facts p:last-child {
+  border: none;
+}
+
+.artist-facts strong {
+  color: #ed1832;
+  letter-spacing: 1px;
+}
