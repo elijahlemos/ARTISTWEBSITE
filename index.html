@@ -319,27 +319,36 @@
   </footer>
 
   <script>
-    // Open and close each album's tracklist when its cover is clicked.
-    document.querySelectorAll(".album-toggle").forEach((button) => {
-      button.addEventListener("click", () => {
+  
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".album-toggle").forEach(function (button) {
+      button.addEventListener("click", function () {
         const panelId = button.getAttribute("aria-controls");
         const panel = document.getElementById(panelId);
+
+        if (!panel) return;
+
         const isOpen = button.getAttribute("aria-expanded") === "true";
 
         panel.hidden = isOpen;
         button.setAttribute("aria-expanded", String(!isOpen));
 
         const label = button.querySelector(".click-label");
-        label.textContent = isOpen ? "+ VIEW TRACKLIST" : "− HIDE TRACKLIST";
+
+        if (label) {
+          label.textContent = isOpen
+            ? "+ VIEW TRACKLIST"
+            : "− HIDE TRACKLIST";
+        }
       });
     });
 
-    // Reveal sections as you scroll down the page.
     const revealItems = document.querySelectorAll(".reveal");
 
     if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
             observer.unobserve(entry.target);
@@ -347,10 +356,17 @@
         });
       }, { threshold: 0.12 });
 
-      revealItems.forEach((item) => observer.observe(item));
+      revealItems.forEach(function (item) {
+        observer.observe(item);
+      });
     } else {
-      revealItems.forEach((item) => item.classList.add("visible"));
+      revealItems.forEach(function (item) {
+        item.classList.add("visible");
+      });
     }
+  });
+</script>
+
   </script>
 </body>
 </html>
