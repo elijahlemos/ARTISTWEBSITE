@@ -1,13 +1,19 @@
 
-/* =========================
-   OPIUM WEBSITE
-   BLACK / RED THEME
-========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg: #080808;
+  --panel: #121212;
+  --red: #e50920;
+  --white: #f5f5f5;
+  --muted: #a3a3a3;
+  --border: #292929;
+}
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -16,14 +22,10 @@ html {
 }
 
 body {
-  background: #080808;
-  color: #f5f5f5;
-  font-family: "Oswald", sans-serif;
-  overflow-x: hidden;
-}
-
-img {
-  max-width: 100%;
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.6;
 }
 
 a {
@@ -31,156 +33,137 @@ a {
   text-decoration: none;
 }
 
-:root {
-  --red: #e00026;
-  --dark-red: #790015;
-  --black: #080808;
-  --card: #111111;
-  --gray: #999999;
+img {
+  display: block;
+  width: 100%;
 }
 
-/* NAVIGATION */
-
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 70px;
-  padding: 18px 5%;
+  z-index: 100;
+  min-height: 76px;
+  padding: 18px 7%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  background: rgba(5, 5, 5, 0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid #242424;
-  z-index: 1000;
+  align-items: center;
+  gap: 24px;
+  background: rgba(8, 8, 8, 0.94);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(14px);
 }
 
 .logo {
-  font-family: "Anton", sans-serif;
-  font-size: 28px;
-  letter-spacing: 2px;
-  white-space: nowrap;
+  font-size: 1.65rem;
+  font-weight: 900;
+  letter-spacing: -2px;
 }
 
-.logo span {
+.logo span,
+h1 span,
+h2 span {
   color: var(--red);
 }
 
-.nav-links {
+.navbar nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   flex-wrap: wrap;
   gap: 22px;
 }
 
-.nav-links a {
-  font-size: 12px;
-  font-weight: 600;
+.navbar nav a {
+  color: #d0d0d0;
+  font-size: 0.72rem;
+  font-weight: 800;
   letter-spacing: 1px;
-  color: #c8c8c8;
-  transition: color 0.3s;
+  transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.navbar nav a:hover {
   color: var(--red);
 }
 
-/* HERO */
-
 .hero {
-  min-height: 100vh;
-  padding: 120px 8% 70px;
+  min-height: 600px;
+  padding: 100px 9%;
   display: flex;
   align-items: center;
-  background:
-    radial-gradient(
-      ellipse at 75% 45%,
-      rgba(160, 0, 25, 0.32),
-      transparent 50%
-    ),
-    linear-gradient(135deg, #080808, #140005 60%, #080808);
+  justify-content: space-between;
   position: relative;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 3px,
-    rgba(255, 255, 255, 0.012) 4px
-  );
-  pointer-events: none;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 80% 50%, rgba(229, 9, 32, 0.19), transparent 40%),
+    linear-gradient(115deg, #080808 45%, #160709 100%);
+  border-bottom: 1px solid var(--border);
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  max-width: 680px;
 }
 
 .eyebrow {
   color: var(--red);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 4px;
-  margin-bottom: 18px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
 }
 
 .hero h1 {
-  font-family: "Anton", sans-serif;
-  font-size: clamp(65px, 11vw, 140px);
-  line-height: 0.95;
-  letter-spacing: 2px;
-}
-
-.hero h1 span,
-.artist-info h2 span,
-.section-heading h2 span {
-  color: var(--red);
+  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  line-height: 0.94;
+  font-weight: 900;
+  letter-spacing: -5px;
 }
 
 .hero-description {
-  color: #aaa;
-  font-size: 14px;
-  letter-spacing: 2px;
-  margin-top: 25px;
-  max-width: 550px;
-  line-height: 1.8;
+  color: #bcbcbc;
+  margin: 24px 0 30px;
+  max-width: 450px;
 }
 
-.hero-button {
+.main-button {
   display: inline-block;
-  margin-top: 35px;
-  padding: 14px 25px;
   background: var(--red);
-  border: 1px solid var(--red);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  transition: 0.3s;
+  color: white;
+  padding: 14px 22px;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.hero-button:hover {
-  background: transparent;
-  color: var(--red);
+.main-button:hover {
+  background: #b90016;
   transform: translateY(-3px);
 }
 
-/* ARTIST SECTIONS */
+.hero-mark {
+  position: absolute;
+  right: 9%;
+  top: 50%;
+  transform: translateY(-50%) rotate(-12deg);
+  font-size: clamp(14rem, 34vw, 32rem);
+  line-height: 1;
+  font-weight: 900;
+  color: rgba(229, 9, 32, 0.07);
+  pointer-events: none;
+}
 
 .artist-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(300px, 1.15fr);
   align-items: center;
-  gap: 65px;
-  padding: 100px 10%;
-  border-bottom: 1px solid #1d1d1d;
+  gap: 7%;
+  padding: 100px 9%;
+  border-bottom: 1px solid var(--border);
+}
+
+.artist-section.reverse {
+  grid-template-columns: minmax(300px, 1.15fr) minmax(260px, 0.85fr);
 }
 
 .artist-section.reverse .artist-image {
@@ -193,16 +176,17 @@ a {
 
 .artist-image {
   overflow: hidden;
-  background: #111;
+  background: var(--panel);
+  border: 1px solid #252525;
+  aspect-ratio: 4 / 5;
 }
 
 .artist-image img {
-  display: block;
   width: 100%;
-  height: 530px;
+  height: 100%;
   object-fit: cover;
-  filter: grayscale(30%);
-  transition: transform 0.6s, filter 0.6s;
+  filter: grayscale(25%);
+  transition: transform 0.6s ease, filter 0.4s ease;
 }
 
 .artist-image:hover img {
@@ -210,255 +194,252 @@ a {
   filter: grayscale(0%);
 }
 
-.artist-info h2 {
-  font-family: "Anton", sans-serif;
-  font-size: clamp(38px, 5vw, 64px);
-  line-height: 1.1;
-  margin-bottom: 25px;
+.artist-info h2,
+.section-heading h2 {
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin-bottom: 24px;
 }
 
 .artist-info > p:not(.eyebrow) {
-  color: #aaa;
-  font-size: 15px;
-  line-height: 1.9;
-  margin-bottom: 18px;
+  color: #bcbcbc;
+  font-size: 0.95rem;
+  max-width: 620px;
 }
 
-.artist-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin: 25px 0;
+.artist-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
 }
 
-.artist-tags span {
-  border: 1px solid #393939;
-  padding: 7px 10px;
-  color: #ccc;
-  font-size: 10px;
-  letter-spacing: 1px;
+.artist-facts div {
+  padding-top: 13px;
+  border-top: 1px solid #393939;
 }
 
-.text-link {
-  display: inline-block;
+.artist-facts span,
+.artist-facts strong {
+  display: block;
+}
+
+.artist-facts span {
   color: var(--red);
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 1px;
-  margin-top: 8px;
-  transition: letter-spacing 0.3s;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
 }
 
-.text-link:hover {
-  letter-spacing: 2px;
+.artist-facts strong {
+  margin-top: 5px;
+  font-size: 0.9rem;
 }
 
-/* GENERAL CONTENT SECTIONS */
-
-.content-section {
-  padding: 100px 8%;
+.albums-section,
+.festivals-section {
+  padding: 100px 7%;
+  border-bottom: 1px solid var(--border);
 }
 
 .section-heading {
   text-align: center;
-  margin-bottom: 55px;
+  margin: 0 auto 48px;
+  max-width: 700px;
 }
 
 .section-heading h2 {
-  font-family: "Anton", sans-serif;
-  font-size: clamp(38px, 6vw, 70px);
-  line-height: 1.1;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .section-heading > p:last-child {
-  color: #888;
-  font-size: 12px;
-  letter-spacing: 2px;
-  line-height: 1.8;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
-
-/* ALBUMS */
 
 .album-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 25px;
+  align-items: start;
 }
 
 .album-card {
   min-width: 0;
-  background: var(--card);
-  border: 1px solid #202020;
+  background: var(--panel);
+  border: 1px solid var(--border);
   overflow: hidden;
-  transition: transform 0.3s, border-color 0.3s;
+  transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
 .album-card:hover {
-  transform: translateY(-7px);
   border-color: var(--red);
+  transform: translateY(-4px);
 }
 
-.album-card img {
-  display: block;
+.album-toggle {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--white);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.album-toggle img {
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  transition: filter 0.4s;
+  background: #1a1a1a;
+  transition: filter 0.25s ease, transform 0.35s ease;
 }
 
-.album-card:hover img {
-  filter: brightness(1.12);
+.album-toggle:hover img {
+  filter: brightness(0.78);
 }
 
-.card-info {
-  padding: 17px;
+.album-title {
+  padding: 17px 15px 0;
+  font-size: 0.95rem;
+  font-weight: 900;
+  line-height: 1.35;
 }
 
-.card-info h3 {
-  font-size: 17px;
+.album-artist {
+  padding: 6px 15px 0;
+  color: var(--muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.8px;
+}
+
+.click-label {
+  display: block;
+  padding: 15px;
+  margin-top: 8px;
+  color: var(--red);
+  font-size: 0.7rem;
+  font-weight: 900;
   letter-spacing: 1px;
-  margin-bottom: 7px;
+}
+
+.album-toggle:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: -3px;
+}
+
+.tracklist {
+  padding: 20px 18px;
+  border-top: 1px solid var(--border);
+  background: #0d0d0d;
+  animation: trackReveal 0.25s ease both;
+}
+
+.tracklist[hidden] {
+  display: none;
+}
+
+.tracklist h3 {
+  color: var(--red);
+  font-size: 0.95rem;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.tracklist ol {
+  padding-left: 23px;
+  color: #d2d2d2;
+  font-size: 0.82rem;
+}
+
+.tracklist li {
+  padding: 5px 0 5px 4px;
+  border-bottom: 1px solid #1d1d1d;
   overflow-wrap: anywhere;
 }
 
-.card-info p {
-  color: var(--gray);
-  font-size: 12px;
+.tracklist li::marker {
+  color: #777;
+  font-size: 0.75rem;
 }
 
-/* COLLABORATIONS */
-
-.collabs-section {
-  background: #0c0c0c;
-}
-
-.collab-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-  max-width: 950px;
-  margin: auto;
-}
-
-.collab-card {
-  background: var(--card);
-  border: 1px solid #242424;
-  overflow: hidden;
-  transition: border-color 0.3s, transform 0.3s;
-}
-
-.collab-card:hover {
-  border-color: var(--red);
-  transform: translateY(-5px);
-}
-
-.collab-card img {
-  display: block;
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  filter: grayscale(30%);
-  transition: filter 0.4s;
-}
-
-.collab-card:hover img {
-  filter: grayscale(0%);
-}
-
-/* LOCATIONS & FESTIVALS */
-
-.locations-section {
-  background:
-    radial-gradient(
-      ellipse at 50% 0%,
-      rgba(100, 0, 20, 0.15),
-      transparent 60%
-    ),
-    #080808;
+.tracklist-note {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.75rem;
 }
 
 .festival-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .festival-card {
-  min-width: 0;
-  background: #101010;
-  border: 1px solid #292929;
+  display: grid;
+  grid-template-columns: minmax(120px, 0.8fr) minmax(0, 1.2fr);
+  background: var(--panel);
+  border: 1px solid var(--border);
   overflow: hidden;
-  transition: transform 0.35s, border-color 0.35s;
+  transition: border-color 0.25s ease;
 }
 
 .festival-card:hover {
-  transform: translateY(-7px);
   border-color: var(--red);
 }
 
 .festival-card img {
-  display: block;
-  width: 100%;
-  height: 250px;
+  height: 100%;
+  min-height: 210px;
   object-fit: cover;
-  filter: grayscale(35%);
-  transition: filter 0.4s, transform 0.5s;
+  filter: grayscale(30%);
 }
 
-.festival-card:hover img {
-  filter: grayscale(0%);
-  transform: scale(1.025);
+.festival-card > div {
+  padding: 23px;
 }
 
-.festival-info {
-  padding: 24px;
+.festival-card .eyebrow {
+  font-size: 0.6rem;
+  letter-spacing: 1.5px;
 }
 
-.event-label {
-  color: var(--red);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 3px;
+.festival-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  font-weight: 900;
 }
 
-.festival-info h3 {
-  font-family: "Anton", sans-serif;
-  font-size: 27px;
-  margin: 12px 0;
-  overflow-wrap: anywhere;
+.festival-card p:last-child {
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
-.festival-info > p:not(.event-detail) {
-  color: #999;
-  font-size: 13px;
-  line-height: 1.8;
+footer {
+  padding: 35px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: #050505;
 }
 
-.event-detail {
-  color: #ddd;
-  font-size: 10px;
-  letter-spacing: 1px;
-  margin-top: 20px;
-  padding-top: 15px;
-  border-top: 1px solid #292929;
-  line-height: 1.8;
-}
-
-.locations-note {
-  text-align: center;
+footer p {
   color: #777;
-  font-size: 12px;
-  line-height: 1.8;
-  margin-top: 35px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
-
-/* SCROLL REVEAL */
 
 .reveal {
   opacity: 0;
-  transform: translateY(25px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(22px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
 .reveal.visible {
@@ -466,107 +447,69 @@ a {
   transform: translateY(0);
 }
 
-/* FOOTER */
-
-.footer {
-  padding: 45px 8%;
-  background: #050505;
-  border-top: 1px solid #252525;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-  flex-wrap: wrap;
+@keyframes trackReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-.footer p {
-  color: #777;
-  font-size: 10px;
-  letter-spacing: 1px;
-  line-height: 1.8;
-}
-
-.back-top {
-  color: var(--red);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-/* TABLETS */
 
 @media (max-width: 1000px) {
-  .navbar {
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    gap: 12px;
-  }
-
-  .nav-links a {
-    font-size: 10px;
-  }
-
-  .artist-section {
-    gap: 35px;
-    padding: 85px 6%;
-  }
-
-  .artist-image img {
-    height: 430px;
-  }
-
   .album-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .festival-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .navbar {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .navbar nav {
+    gap: 13px;
+  }
+
+  .artist-section,
+  .artist-section.reverse {
+    padding: 75px 7%;
+    gap: 5%;
   }
 }
 
-/* PHONES */
-
-@media (max-width: 650px) {
-  html {
-    scroll-padding-top: 125px;
-  }
-
+@media (max-width: 700px) {
   .navbar {
-    padding: 12px 5%;
+    position: relative;
+    align-items: flex-start;
     flex-direction: column;
-    gap: 10px;
   }
 
-  .logo {
-    font-size: 24px;
+  .navbar nav {
+    gap: 12px 18px;
   }
 
-  .nav-links {
-    width: 100%;
-    justify-content: flex-start;
-    gap: 12px 16px;
-  }
-
-  .nav-links a {
-    font-size: 10px;
+  .navbar nav a {
+    font-size: 0.66rem;
   }
 
   .hero {
-    min-height: 90vh;
-    padding: 150px 7% 70px;
+    min-height: 500px;
+    padding: 80px 7%;
   }
 
   .hero h1 {
-    font-size: clamp(58px, 15vw, 90px);
+    letter-spacing: -3px;
   }
 
-  .hero-description {
-    font-size: 12px;
+  .hero-mark {
+    right: -5%;
+    opacity: 0.7;
   }
 
-  .artist-section {
+  .artist-section,
+  .artist-section.reverse {
     grid-template-columns: 1fr;
     padding: 65px 7%;
     gap: 30px;
@@ -577,53 +520,80 @@ a {
     order: initial;
   }
 
-  .artist-image img {
-    height: 390px;
+  .artist-image {
+    max-width: 440px;
   }
 
-  .content-section {
-    padding: 70px 6%;
+  .albums-section,
+  .festivals-section {
+    padding: 70px 5%;
   }
 
   .album-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    gap: 14px;
   }
 
-  .card-info {
-    padding: 12px;
+  .album-title {
+    font-size: 0.8rem;
+    padding-left: 11px;
+    padding-right: 11px;
   }
 
-  .card-info h3 {
-    font-size: 14px;
+  .album-artist,
+  .click-label {
+    padding-left: 11px;
+    padding-right: 11px;
+    font-size: 0.62rem;
   }
 
-  .collab-grid,
+  .tracklist {
+    padding: 16px 12px;
+  }
+
+  .tracklist ol {
+    font-size: 0.76rem;
+  }
+
   .festival-grid {
     grid-template-columns: 1fr;
   }
 
-  .collab-card img,
-  .festival-card img {
-    height: 280px;
-  }
-
-  .footer {
+  footer {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
   }
 }
 
-/* REDUCED MOTION ACCESSIBILITY */
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+@media (max-width: 420px) {
+  .album-grid {
+    grid-template-columns: 1fr;
   }
 
+  .album-card {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .artist-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .festival-card {
+    grid-template-columns: 1fr;
+  }
+
+  .festival-card img {
+    max-height: 280px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
+    scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
