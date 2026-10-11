@@ -4,294 +4,353 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OPIUM | Carti x Ken Carson</title>
+  <title>OPIUM | Carti & Ken Carson</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-  <!-- NAVIGATION -->
-  <nav class="navbar">
-    <a class="logo" href="#home">OPIUM<span>.</span></a>
-
-    <div class="nav-links">
-      <a href="#home">HOME</a>
+  <header class="navbar">
+    <a href="#home" class="logo">OPIUM<span>.</span></a>
+    <nav>
       <a href="#carti">CARTI</a>
       <a href="#ken">KEN CARSON</a>
       <a href="#albums">ALBUMS</a>
-      <a href="#collabs">COLLABS</a>
-      <a href="#locations">LOCATIONS & FESTIVALS</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header id="home" class="hero">
-    <div class="hero-content">
-      <p class="eyebrow">WELCOME TO THE DARK SIDE</p>
-      <h1>THE <span>OPIUM</span><br>UNIVERSE</h1>
-      <p class="hero-description">
-        PLAYBOI CARTI. KEN CARSON. THE SOUND OF A NEW GENERATION.
-      </p>
-      <a class="hero-button" href="#carti">ENTER THE WORLD</a>
-    </div>
+      <a href="#festivals">LOCATIONS & FESTIVALS</a>
+    </nav>
   </header>
 
-  <!-- PLAYBOI CARTI -->
-  <section id="carti" class="artist-section">
-    <div class="artist-image">
-      <img src="images/carti.jpg" alt="Playboi Carti">
-    </div>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content reveal">
+        <p class="eyebrow">WELCOME TO THE OPIUM WORLD</p>
+        <h1>THE SOUND<br>OF <span>OPIUM.</span></h1>
+        <p class="hero-description">
+          Playboi Carti. Ken Carson. A different sound, a different world.
+        </p>
+        <a class="main-button" href="#albums">EXPLORE THE MUSIC ↓</a>
+      </div>
+      <div class="hero-mark">O</div>
+    </section>
 
-    <div class="artist-info">
-      <p class="eyebrow">THE KING OF VAMP</p>
-      <h2>PLAYBOI <span>CARTI</span></h2>
+    <section class="artist-section reveal" id="carti">
+      <div class="artist-image">
+        <img src="images/carti.jpg" alt="Playboi Carti">
+      </div>
+      <div class="artist-info">
+        <p class="eyebrow">ARTIST 01</p>
+        <h2>PLAYBOI <span>CARTI</span></h2>
+        <p>
+          Playboi Carti, born Jordan Terrell Carter on September 13, 1995,
+          is a rapper from Atlanta, Georgia. He became known for his
+          experimental sound, unique voice, energetic performances, and
+          influence on modern hip-hop. His albums include Playboi Carti,
+          Die Lit, Whole Lotta Red, and MUSIC. He is also the founder of
+          the Opium record label.
+        </p>
+        <div class="artist-facts">
+          <div><span>BIRTHPLACE</span><strong>Atlanta, Georgia</strong></div>
+          <div><span>BORN</span><strong>September 13, 1995</strong></div>
+          <div><span>LABEL</span><strong>Opium</strong></div>
+        </div>
+      </div>
+    </section>
 
-      <p>
-        Playboi Carti, born Jordan Terrell Carter on September 13, 1995,
-        is a rapper from Atlanta, Georgia. He became known for his
-        experimental sound, unique voice, dark visuals, and influence
-        on modern hip-hop.
-      </p>
+    <section class="artist-section reverse reveal" id="ken">
+      <div class="artist-image">
+        <img src="images/ken.jpg" alt="Ken Carson">
+      </div>
+      <div class="artist-info">
+        <p class="eyebrow">ARTIST 02</p>
+        <h2>KEN <span>CARSON</span></h2>
+        <p>
+          Ken Carson, born Kenyatta Lee Frazier Jr. on April 11, 2000,
+          is a rapper from Atlanta, Georgia. He is signed to Opium and is
+          known for his energetic performances, distorted production, and
+          rage-inspired sound. His projects include Project X, X, A Great
+          Chaos, and More Chaos. He has built a strong following through
+          his unique style and collaborations with other artists.
+        </p>
+        <div class="artist-facts">
+          <div><span>BIRTHPLACE</span><strong>Atlanta, Georgia</strong></div>
+          <div><span>BORN</span><strong>April 11, 2000</strong></div>
+          <div><span>LABEL</span><strong>Opium</strong></div>
+        </div>
+      </div>
+    </section>
 
-      <p>
-        His projects include Die Lit, Whole Lotta Red, and MUSIC.
-        His sound continues to evolve through distorted production,
-        aggressive vocals, and a distinctive live-performance style.
-      </p>
-
-      <div class="artist-tags">
-        <span>ATLANTA, GEORGIA</span>
-        <span>RAPPER</span>
-        <span>OPIUM FOUNDER</span>
+    <section class="albums-section" id="albums">
+      <div class="section-heading reveal">
+        <p class="eyebrow">PRESS AN ALBUM TO EXPLORE</p>
+        <h2>THE <span>DISCOGRAPHY</span></h2>
+        <p>Click any album cover to reveal its songs.</p>
       </div>
 
-      <a href="#albums" class="text-link">EXPLORE DISCOGRAPHY →</a>
-    </div>
-  </section>
+      <div class="album-grid">
 
-  <!-- KEN CARSON -->
-  <section id="ken" class="artist-section reverse">
-    <div class="artist-image">
-      <img src="images/ken.jpg" alt="Ken Carson">
-    </div>
+        <!-- PLAYBOI CARTI -->
+        <article class="album-card reveal">
+          <button class="album-toggle" aria-expanded="false" aria-controls="tracks-carti">
+            <img src="images/playboi-carti.jpg" alt="Playboi Carti self-titled album cover">
+            <span class="album-title">PLAYBOI CARTI</span>
+            <span class="album-artist">PLAYBOI CARTI · 2017</span>
+            <span class="click-label">+ VIEW TRACKLIST</span>
+          </button>
+          <div class="tracklist" id="tracks-carti" hidden>
+            <h3>PLAYBOI CARTI</h3>
+            <ol>
+              <li>Location</li><li>Magnolia</li><li>Lookin</li>
+              <li>wokeuplikethis*</li><li>Let It Go</li><li>Half & Half</li>
+              <li>New Choppa</li><li>Other Shit</li><li>No. 9</li>
+              <li>dothatshit!</li><li>Lame Niggaz</li>
+              <li>Yah Mean</li><li>Flex</li><li>Kelly K</li>
+              <li>Had 2</li>
+            </ol>
+          </div>
+        </article>
 
-    <div class="artist-info">
-      <p class="eyebrow">TEEN X</p>
-      <h2>KEN <span>CARSON</span></h2>
+        <!-- DIE LIT -->
+        <article class="album-card reveal">
+          <button class="album-toggle" aria-expanded="false" aria-controls="tracks-die-lit">
+            <img src="images/die-lit.jpg" alt="Die Lit album cover">
+            <span class="album-title">DIE LIT</span>
+            <span class="album-artist">PLAYBOI CARTI · 2018</span>
+            <span class="click-label">+ VIEW TRACKLIST</span>
+          </button>
+          <div class="tracklist" id="tracks-die-lit" hidden>
+            <h3>DIE LIT</h3>
+            <ol>
+              <li>Long Time</li><li>R.I.P.</li><li>Lean 4 Real</li>
+              <li>Old Money</li><li>Love Hurts</li><li>Shoota</li>
+              <li>Right Now</li><li>Poke It Out</li><li>Home (KOD)</li>
+              <li>Fell In Luv</li><li Foreign">Foreign</li>
+              <li>Pull Up</li><li>Mileage</li><li>FlatBed Freestyle</li>
+              <li>No Time</li><li>Middle of the Summer</li>
+              <li>Choppa Won't Miss</li><li>R.I.P. Fredo</li>
+              <li>Top</li>
+            </ol>
+          </div>
+        </article>
 
-      <p>
-        Ken Carson, born Kenyatta Lee Frazier Jr. on April 11, 2000,
-        is a rapper from Atlanta, Georgia. He is signed to Opium
-        and is known for his energetic sound, electronic production,
-        and futuristic style.
-      </p>
+        <!-- WHOLE LOTTA RED -->
+        <article class="album-card reveal">
+          <button class="album-toggle" aria-expanded="false" aria-controls="tracks-wlr">
+            <img src="images/wlr.jpg" alt="Whole Lotta Red album cover">
+            <span class="album-title">WHOLE LOTTA RED</span>
+            <span class="album-artist">PLAYBOI CARTI · 2020</span>
+            <span class="click-label">+ VIEW TRACKLIST</span>
+          </button>
+          <div class="tracklist" id="tracks-wlr" hidden>
+            <h3>WHOLE LOTTA RED</h3>
+            <ol>
+              <li>Rockstar Made</li><li>Go2DaMoon</li><li>Stop Breathing</li>
+              <li>Beno!</li><li>JumpOutTheHouse</li><li>M3tamorphosis</li>
+              <li>Slay3r</li><li>No Sl33p</li><li>New Tank</li>
+              <li>Teen X</li><li>Meh</li><li>Vamp Anthem</li>
+              <li>New N3on</li><li>Control</li><li>Punk Monk</li>
+              <li>On That Time</li><li>King Vamp</li><li>Place</li>
+              <li>Sky</li><li>Over</li><li>ILoveUIHateU</li>
+              <li>Die4Guy</li><li>Not PLaying</li><li>F33l Lik3 Dyin</li>
+            </ol>
+          </div>
+        </article>
 
-      <p>
-        His projects include Project X, X, A Great Chaos, and More Chaos.
-        Ken has developed his own sound while helping shape the
-        next generation of Opium-inspired hip-hop.
-      </p>
+        <!-- MUSIC -->
+        <article class="album-card reveal">
+          <button class="album-toggle" aria-expanded="false" aria-controls="tracks-music">
+            <img src="images/music.jpg" alt="MUSIC album cover">
+            <span class="album-title">MUSIC</span>
+            <span class="album-artist">PLAYBOI CARTI · 2025</span>
+            <span class="click-label">+ VIEW TRACKLIST</span>
+          </button>
+          <div class="tracklist" id="tracks-music" hidden>
+            <h3>MUSIC</h3>
+            <ol>
+              <li>POP OUT</li><li>CRUSH</li><li>K POP</li>
+              <li>EVIL J0RDAN</li><li>MOJO JOJO</li><li>PHILLY</li>
+              <li>RADAR</li><li>RATHER LIE</li><li>FINE SHIT</li>
+              <li>BACKD00R</li><li>TOXIC</li><li>MUNYUN</li>
+              <li>CRANK</li><li>CHARGE DEM HOES A FEE</li>
+              <li>GOOD CREDIT</li><li>I SEEEEEE YOU BABY BOI</li>
+              <li>WAKE UP F1LTHY</li><li>JUMPIN</li><li>TRIM</li>
+              <li>COCAINE NOSE</li><li>WE NEED ALL DA VIBES</li>
+              <li>OLYMPIC TORCH</li><li>OOPS</li><li>THEN I CANT SLEEP</li>
+              <li>NO. 9</li><li>DIS 1 GOT IT</li><li>WALK</li>
+              <li>HBA</li><li>OVERLY</li><li>LIKE WEEZY</li>
+            </ol>
+            <p class="tracklist-note">Tracklists can vary by release or edition.</p>
+          </div>
+        </article>
 
-      <div class="artist-tags">
-        <span>ATLANTA, GEORGIA</span>
-        <span>RAPPER</span>
-        <span>OPIUM</span>
+        <!-- PROJECT X -->
+        <article class="album-card reveal">
+          <button class="album-toggle" aria-expanded="false" aria-controls="tracks-project-x">
+            <img src="images/project-x.jpg" alt="Project X album cover">
+            <span class="album-title">PROJECT X</span>
+            <span class="album-artist">KEN CARSON · 2021</span>
+            <span class="click-label">+ VIEW TRACKLIST</span>
+          </button>
+          <div class="tracklist" id="tracks-project-x" hidden>
+            <h3>PROJECT X</h3>
+            <ol>
+              <li>Rock N Roll</li><li>PDBMH</li><li>Party All Day</li>
+              <li>Run + Ran</li><li>Change</li><li>Burnin' Up</li>
+              <li>So What</li><li>Clutch</li><li>Who’s Next</li>
+              <li>Going Schitz</li>
+            </ol>
+          </div>
+        </article>
+
+        <!-- X -->
+        <article class="album-card reveal">
+          <button class="album-toggle" aria-expanded="false" aria-controls="tracks-x">
+            <img src="images/x.jpg" alt="X album cover">
+            <span class="album-title">X</span>
+            <span class="album-artist">KEN CARSON · 2022</span>
+            <span class="click-label">+ VIEW TRACKLIST</span>
+          </button>
+          <div class="tracklist" id="tracks-x" hidden>
+            <h3>X</h3>
+            <ol>
+              <li>Intro</li><li>Go</li><li>Jennifer's Body</li>
+              <li>Fuk 12</li><li>Fashion Habits</li><li>Murda Musik</li>
+              <li>Delinquent</li><li>Gems</li><li>Going Schitz</li>
+              <li>Turn Up</li><li>Freestyle 2</li><li>Money Hunt</li>
+              <li>South Beach</li><li>MDMA</li><li>Get Rich or Die</li>
+              <li>Nobody</li><li>Same Thing</li><li>PDBMH</li>
+              <li>Go (Remix)</li><li>Freestyle 3</li>
+            </ol>
+            <p class="tracklist-note">Some editions include bonus tracks.</p>
+          </div>
+        </article>
+
+        <!-- A GREAT CHAOS -->
+        <article class="album-card reveal">
+          <button class="album-toggle" aria-expanded="false" aria-controls="tracks-agc">
+            <img src="images/agc.jpg" alt="A Great Chaos album cover">
+            <span class="album-title">A GREAT CHAOS</span>
+            <span class="album-artist">KEN CARSON · 2023</span>
+            <span class="click-label">+ VIEW TRACKLIST</span>
+          </button>
+          <div class="tracklist" id="tracks-agc" hidden>
+            <h3>A GREAT CHAOS</h3>
+            <ol>
+              <li>Green Room</li><li>Jennifer's Body</li><li>Fighting My Demons</li>
+              <li>Singapore</li><li>Lose It</li><li>Hardcore</li>
+              <li>Me N My Kup</li><li>It's Over</li><li>Succubus</li>
+              <li>Paranoid</li><li>Vampire Hour</li><li>Nightcore</li>
+              <li>Nightcore 2</li><li>Mewtwo</li><li>Teen Bean</li>
+              <li>Almighty 00</li><li>Overtime</li><li>Rockstar Lifestyle</li>
+            </ol>
+            <p class="tracklist-note">Deluxe editions have additional tracks.</p>
+          </div>
+        </article>
+
+        <!-- MORE CHAOS -->
+        <article class="album-card reveal">
+          <button class="album-toggle" aria-expanded="false" aria-controls="tracks-more-chaos">
+            <img src="images/more-chaos.jpg" alt="More Chaos album cover">
+            <span class="album-title">MORE CHAOS</span>
+            <span class="album-artist">KEN CARSON · 2025</span>
+            <span class="click-label">+ VIEW TRACKLIST</span>
+          </button>
+          <div class="tracklist" id="tracks-more-chaos" hidden>
+            <h3>MORE CHAOS</h3>
+            <p class="tracklist-note">
+              Add the track names from your edition here if the release has
+              a different tracklist. The cover is clickable and this panel
+              opens when selected.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="festivals-section reveal" id="festivals">
+      <div class="section-heading">
+        <p class="eyebrow">LIVE SHOWS & CULTURE</p>
+        <h2>LOCATIONS <span>& FESTIVALS</span></h2>
+        <p>Some places and events connected to the artists' live music scene.</p>
       </div>
 
-      <a href="#albums" class="text-link">EXPLORE DISCOGRAPHY →</a>
-    </div>
-  </section>
+      <div class="festival-grid">
+        <article class="festival-card">
+          <img src="images/carti-live.jpg" alt="Playboi Carti live performance">
+          <div>
+            <p class="eyebrow">LIVE PERFORMANCE</p>
+            <h3>PLAYBOI CARTI</h3>
+            <p>Known for high-energy performances, dramatic lighting, and a strong connection with the crowd.</p>
+          </div>
+        </article>
 
-  <!-- ALBUMS -->
-  <section id="albums" class="content-section">
-    <div class="section-heading">
-      <p class="eyebrow">THE MUSIC</p>
-      <h2>THE <span>DISCOGRAPHY</span></h2>
-      <p>PROJECTS THAT DEFINE THE SOUND.</p>
-    </div>
+        <article class="festival-card">
+          <img src="images/ken-live.jpg" alt="Ken Carson live performance">
+          <div>
+            <p class="eyebrow">LIVE PERFORMANCE</p>
+            <h3>KEN CARSON</h3>
+            <p>Brings intense energy and a loud, fast-paced sound to live shows.</p>
+          </div>
+        </article>
 
-    <div class="album-grid">
+        <article class="festival-card">
+          <img src="images/carti-portrait.jpg" alt="Playboi Carti portrait">
+          <div>
+            <p class="eyebrow">MUSIC SCENE</p>
+            <h3>ATLANTA, GEORGIA</h3>
+            <p>The hometown of both artists and an important city in modern hip-hop.</p>
+          </div>
+        </article>
 
-      <article class="album-card">
-        <img src="images/playboi-carti.jpg" alt="Playboi Carti debut album">
-        <div class="card-info">
-          <h3>PLAYBOI CARTI</h3>
-          <p>Playboi Carti · 2017</p>
-        </div>
-      </article>
+        <article class="festival-card">
+          <img src="images/ken-portrait.jpg" alt="Ken Carson portrait">
+          <div>
+            <p class="eyebrow">FESTIVAL CULTURE</p>
+            <h3>FESTIVAL STAGES</h3>
+            <p>Large crowds, heavy bass, dramatic visuals, and live performances from artists across the scene.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
 
-      <article class="album-card">
-        <img src="images/die-lit.jpg" alt="Die Lit album cover">
-        <div class="card-info">
-          <h3>DIE LIT</h3>
-          <p>Playboi Carti · 2018</p>
-        </div>
-      </article>
-
-      <article class="album-card">
-        <img src="images/wlr.jpg" alt="Whole Lotta Red album cover">
-        <div class="card-info">
-          <h3>WHOLE LOTTA RED</h3>
-          <p>Playboi Carti · 2020</p>
-        </div>
-      </article>
-
-      <article class="album-card">
-        <img src="images/music.jpg" alt="MUSIC album cover">
-        <div class="card-info">
-          <h3>MUSIC</h3>
-          <p>Playboi Carti · 2025</p>
-        </div>
-      </article>
-
-      <article class="album-card">
-        <img src="images/project-x.jpg" alt="Project X album cover">
-        <div class="card-info">
-          <h3>PROJECT X</h3>
-          <p>Ken Carson · 2021</p>
-        </div>
-      </article>
-
-      <article class="album-card">
-        <img src="images/x.jpg" alt="X album cover">
-        <div class="card-info">
-          <h3>X</h3>
-          <p>Ken Carson · 2022</p>
-        </div>
-      </article>
-
-      <article class="album-card">
-        <img src="images/agc.jpg" alt="A Great Chaos album cover">
-        <div class="card-info">
-          <h3>A GREAT CHAOS</h3>
-          <p>Ken Carson · 2023</p>
-        </div>
-      </article>
-
-      <article class="album-card">
-        <img src="images/more-chaos.jpg" alt="More Chaos album cover">
-        <div class="card-info">
-          <h3>MORE CHAOS</h3>
-          <p>Ken Carson · 2025</p>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- COLLABORATIONS -->
-  <section id="collabs" class="content-section collabs-section">
-    <div class="section-heading">
-      <p class="eyebrow">THE CONNECTION</p>
-      <h2>OPIUM <span>COLLABS</span></h2>
-      <p>THE ARTISTS. THE SOUND. THE MOVEMENT.</p>
-    </div>
-
-    <div class="collab-grid">
-
-      <article class="collab-card">
-        <img src="images/carti-live.jpg" alt="Playboi Carti performing">
-        <div class="card-info">
-          <h3>PLAYBOI CARTI</h3>
-          <p>Founder of Opium</p>
-        </div>
-      </article>
-
-      <article class="collab-card">
-        <img src="images/ken-live.jpg" alt="Ken Carson performing">
-        <div class="card-info">
-          <h3>KEN CARSON</h3>
-          <p>Opium artist</p>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- LOCATIONS AND FESTIVALS: REPLACES GALLERY -->
-  <section id="locations" class="content-section locations-section">
-    <div class="section-heading">
-      <p class="eyebrow">FROM THE STUDIO TO THE STAGE</p>
-      <h2>LOCATIONS <span>& FESTIVALS</span></h2>
-      <p>THE CITIES, THE CROWDS, THE LIVE EXPERIENCE.</p>
-    </div>
-
-    <div class="festival-grid">
-
-      <article class="festival-card">
-        <img src="images/carti-live.jpg" alt="Playboi Carti live performance">
-        <div class="festival-info">
-          <span class="event-label">FESTIVAL</span>
-          <h3>ROLLING LOUD</h3>
-          <p>
-            A major hip-hop festival featuring performances
-            from artists across the rap scene.
-          </p>
-          <p class="event-detail">PLAYBOI CARTI & KEN CARSON</p>
-        </div>
-      </article>
-
-      <article class="festival-card">
-        <img src="images/ken-live.jpg" alt="Ken Carson live performance">
-        <div class="festival-info">
-          <span class="event-label">LIVE SHOWS</span>
-          <h3>KEN CARSON</h3>
-          <p>
-            Explore Ken Carson's festival appearances,
-            tour stops, and live performances.
-          </p>
-          <p class="event-detail">TOUR & FESTIVAL ARCHIVE</p>
-        </div>
-      </article>
-
-      <article class="festival-card">
-        <img src="images/carti-portrait.jpg" alt="Playboi Carti artist portrait">
-        <div class="festival-info">
-          <span class="event-label">LIVE SHOWS</span>
-          <h3>PLAYBOI CARTI</h3>
-          <p>
-            Explore Carti's festival appearances,
-            tour stops, and live performances.
-          </p>
-          <p class="event-detail">TOUR & FESTIVAL ARCHIVE</p>
-        </div>
-      </article>
-
-    </div>
-
-    <p class="locations-note">
-      Want exact cities, venues, and performance years?
-      Add verified event details as the archive grows.
-    </p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <a class="logo" href="#home">OPIUM<span>.</span></a>
-    <p>FAN-MADE WEBSITE · MADE FOR THE LOVE OF THE MUSIC</p>
-    <a href="#home" class="back-top">BACK TO TOP ↑</a>
+  <footer>
+    <a href="#home" class="logo">OPIUM<span>.</span></a>
+    <p>FAN-MADE MUSIC WEBSITE · NOT AN OFFICIAL ARTIST SITE</p>
   </footer>
 
-  <!-- SCROLL ANIMATIONS -->
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
+    // Open and close each album's tracklist when its cover is clicked.
+    document.querySelectorAll(".album-toggle").forEach((button) => {
+      button.addEventListener("click", () => {
+        const panelId = button.getAttribute("aria-controls");
+        const panel = document.getElementById(panelId);
+        const isOpen = button.getAttribute("aria-expanded") === "true";
+
+        panel.hidden = isOpen;
+        button.setAttribute("aria-expanded", String(!isOpen));
+
+        const label = button.querySelector(".click-label");
+        label.textContent = isOpen ? "+ VIEW TRACKLIST" : "− HIDE TRACKLIST";
       });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll(
-      ".artist-section, .album-card, .collab-card, .festival-card, .section-heading"
-    ).forEach((element) => {
-      element.classList.add("reveal");
-      observer.observe(element);
     });
-  </script>
 
+    // Reveal sections as you scroll down the page.
+    const revealItems = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealItems.forEach((item) => observer.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add("visible"));
+    }
+  </script>
 </body>
 </html>
